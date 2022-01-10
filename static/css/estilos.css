@@ -92,7 +92,7 @@ nav li:hover{
 article{
 	display: flex;
 	flex-flow: row nowrap;
-	justify-content: space-around;
+	justify-content: center;
 	align-items: center;
 }
 .title{
@@ -118,11 +118,14 @@ article{
 	font-weight: 700;
 	letter-spacing: 1px;
 }
-
+.imagen{
+	margin-left: 50px;
+	padding: 20px;
+}
 .imagen img{
 	object-fit: contain;
-	width: 400px;
-	height: 400px;
+	width: 350px;
+	height: 350px;
 }
 
 footer{
