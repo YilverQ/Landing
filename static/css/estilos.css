@@ -1,0 +1,211 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+a{
+	text-decoration: none;
+}
+
+li{
+	list-style: none;
+}
+
+/*Fuentes*/
+@font-face{
+    font-family: hola1;
+    src:url(../fonts/RobotoCondensed-Bold.ttf); 
+}
+
+@font-face{
+    font-family: hola2;
+    src:url(../fonts/RobotoCondensed-Light.ttf); 
+}
+
+@font-face{
+    font-family: hola3;
+    src:url(../fonts/RobotoCondensed-Regular.ttf); 
+}
+
+@font-face{
+    font-family: hola4;
+    src:url(../fonts/Barlow-ExtraLight.ttf); 
+}
+/*Fin de la Fuentes*/
+
+body{
+    background:linear-gradient(160deg, #000 0%, #111 50%, #222 100%);
+    font-family:sans-serif;
+}
+
+header h2{
+	letter-spacing: 2px;
+	font-family: hola3;
+	color: #f8f1f1;
+	border-radius: 5px;
+	border: 2px solid #16c79a;
+	padding: 5px;
+    transition: .5s ease-out;
+}
+
+header h2:hover{
+	border-color: white;
+    box-shadow: inset 0px -70px 0px 0px #16c79a;
+}
+
+header{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 30px 100px;
+}
+
+nav ul{
+	display: flex;
+	justify-content: space-between;
+	margin: 0px 50px;
+}
+
+nav li{
+	color: #16c79a;
+	margin: 0px 10px;
+	font-family: hola2;
+	color: white;
+	letter-spacing: 2px;
+	font-weight: 700;
+	padding: 5px;
+	transition: .5s all;
+	border-bottom: 2px solid rgba(10,10,10,0);
+}
+
+nav li:hover{
+	border-bottom: 2px solid #16c79a;
+	transition: .5s all;
+}
+
+article{
+	margin-top: 150px;
+}
+
+article div.title{
+	width: 50%;
+	margin: 0px 0px 0px 100px;
+}
+
+.title h1{
+	font-size: 30px;
+	font-family: hola1;
+	letter-spacing: 3px;
+	color: #16c79a;
+	background-color: white;
+	width: 200px;
+	text-align: center;
+	border-radius: 1px;
+}
+
+.title p{
+	width: 50%;
+	text-align: justify;
+	margin: 20px 0px 0px 0px;
+	color: white;
+	font-family: hola4;
+	font-weight: 500;
+	letter-spacing: 1px;
+}
+
+
+footer{
+	width: 100%;
+	margin: 120px 0px 50px 0px;
+}
+
+footer div ul{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+footer li{
+	width: 200px;
+	height: 100px;
+	background-color: white;
+	border-radius: 2px;
+}
+
+.plataformas li{
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	transition: all .5s;
+}
+
+.plataformas li:hover{
+	box-shadow: 2px 2px 2px rgba(10,10,10,0.5);
+	transition: all .5s;
+	border-radius: 3px;
+	transform: translateY(-5px);
+}
+
+.img1{
+	background-image: url(../img/mercado.png);
+}
+
+.img2{
+	background-image: url(../img/whatsapp.jpg);
+}
+
+.img3{
+	background-image: url(../img/marketplace.jpg);
+}
+
+.img4{
+	background-image: url(../img/instagram.jpg);
+}
+
+@media only screen and (max-width:1000px){
+	nav li{
+		margin: 0;
+		padding: 5px 0px;
+	}
+
+	nav {
+		margin-top: 5px;
+		width: 100%;
+		justify-content: space-around;
+	}
+
+	article .title{
+		width: 100%;
+	}
+
+	.title h1, .title p{
+		width: 100%;
+	} 
+
+	footer li{
+		margin: 10px;
+	}
+
+}
+
+@media only screen and (max-width:710px){
+	header{
+		margin: 50px 10px;
+	}
+}
+
+@media only screen and (max-width:540px){
+	nav ul{
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	nav li{
+		width: 50%;
+	}
+
+
+}
+
