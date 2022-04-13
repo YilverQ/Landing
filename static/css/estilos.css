@@ -1,3 +1,14 @@
+/*VARIABLES*/
+:root{
+  /*Colores de Google*/
+  --color-blue1: #01d0fb;
+  --color-blue2: #01c0fa;
+  --color-violet:  #9857bd;
+  --color-green1:  #05e39c;
+  --color-green2: #0ed290;
+  --color-carne: #fed2a4;
+}
+
 *{
 	padding: 0;
 	margin: 0;
@@ -37,88 +48,85 @@ li{
 /*Fin de la Fuentes*/
 
 body{
-    background:linear-gradient(160deg, #000 0%, #111 50%, #222 100%);
+    background:linear-gradient(to right, var(--color-green1), var(--color-green2));
     font-family:sans-serif;
 }
-
+header{
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	padding: 20px 50px;
+}
 header h2{
 	letter-spacing: 2px;
 	font-family: hola3;
 	color: #f8f1f1;
-	border-radius: 5px;
-	border: 2px solid #16c79a;
+	border-radius: 4px;
+	border: 2px solid var(--color-green2);
 	padding: 5px;
     transition: .5s ease-out;
-}
-
-header h2:hover{
+    box-shadow: inset 0px -70px 0px 0px var(--color-green2);
 	border-color: white;
-    box-shadow: inset 0px -70px 0px 0px #16c79a;
 }
-
-header{
-	display: flex;
-	flex-wrap: wrap;
-	margin: 30px 100px;
-}
-
 nav ul{
 	display: flex;
 	justify-content: space-between;
 	margin: 0px 50px;
 }
-
 nav li{
-	color: #16c79a;
-	margin: 0px 10px;
+	margin: 0px 5px;
 	font-family: hola2;
-	color: white;
+	color: black;
 	letter-spacing: 2px;
 	font-weight: 700;
 	padding: 5px;
-	transition: .5s all;
 	border-bottom: 2px solid rgba(10,10,10,0);
+	transition: .2s all;
 }
 
 nav li:hover{
-	border-bottom: 2px solid #16c79a;
-	transition: .5s all;
+	color: white;
+	border-bottom: 2px solid white;
 }
 
 article{
-	margin-top: 150px;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	align-items: center;
 }
-
-article div.title{
-	width: 50%;
-	margin: 0px 0px 0px 100px;
+.title{
+	width: 500px;
 }
 
 .title h1{
 	font-size: 30px;
 	font-family: hola1;
 	letter-spacing: 3px;
-	color: #16c79a;
+	color: var(--color-green2);
 	background-color: white;
-	width: 200px;
+	width: 400px;
 	text-align: center;
 	border-radius: 1px;
 }
 
 .title p{
-	width: 50%;
 	text-align: justify;
 	margin: 20px 0px 0px 0px;
-	color: white;
+	color: black;
 	font-family: hola4;
-	font-weight: 500;
+	font-weight: 700;
 	letter-spacing: 1px;
 }
 
+.imagen img{
+	object-fit: contain;
+	width: 400px;
+	height: 400px;
+}
 
 footer{
 	width: 100%;
-	margin: 120px 0px 50px 0px;
 }
 
 footer div ul{
@@ -164,48 +172,59 @@ footer li{
 	background-image: url(../img/instagram.jpg);
 }
 
-@media only screen and (max-width:1000px){
-	nav li{
-		margin: 0;
-		padding: 5px 0px;
-	}
-
-	nav {
-		margin-top: 5px;
-		width: 100%;
+@media only screen and (max-width:950px){
+	.imagen{
+		display: none;
+	}	
+	body{
+		display: flex;
+		flex-flow: column nowrap;
 		justify-content: space-around;
+		height: 100vh;
 	}
-
-	article .title{
-		width: 100%;
-	}
-
-	.title h1, .title p{
-		width: 100%;
-	} 
-
-	footer li{
-		margin: 10px;
-	}
-
-}
-
-@media only screen and (max-width:710px){
 	header{
-		margin: 50px 10px;
+		justify-content: space-around;
+		padding: 20px 0;
+	}
+	header h2{
+		font-size: 20px;
+	}
+	.title{
+		width: 100%;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		align-items: center;
+	}
+	.title h1{
+		font-size: 40px;
+		width: 500px;
+	}
+	.title p{
+		width: 80%;
+		text-align: justify;
+		margin: 20px 0px 0px 0px;
 	}
 }
 
-@media only screen and (max-width:540px){
+@media only screen and (max-width:820px){
+	header{
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	header h2{
+		font-size: 25px;
+	}
 	nav ul{
 		display: flex;
-		flex-wrap: wrap;
+		justify-content: space-between;
+		margin: 20px 0;
 	}
-
-	nav li{
-		width: 50%;
+	nav li:hover{
+		color: black;
+		border-bottom: 2px solid white;
 	}
-
-
 }
-
